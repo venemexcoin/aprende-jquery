@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Selección</title>
+<style>
+    ul li {
+      list-style:none;
+      padding:5px;
+    }
+    ul li label {
+      cursor:pointer;
+    }
+  </style>
 </head>
 <body>
 <h1 id="principal">Heading 1</h1>
 <h2 class="heading">Heading 2</h2>
 <ul>
-    <li>Uno</li>
-    <li>Dos</li>
-    <li>Tres</li>
-    <li>Cuatro</li>
-    <li>Cinco</li>
+  <li><label>Uno</label></li>
+    <li><label>Dos</label></li>
+    <li><label>Tres</label></li>
+    <li><label>Cuatro</label></li>
+    <li><label>Cinco</label></li>
 </ul>
 <script>
     // Buscar elementos en base a un selector
-    var elementos = document.querySelectorAll('li');
+    var elementos = document.querySelectorAll('label');
     //console.log(elementos);
 
-    elementos[0].addEventListener('click', function () {
-       console.log('Click');
+    elementos[3].addEventListener('click', function () {
+      console.log('Click');
     });
 
     // Buscar elementos con una clase específica
@@ -35,5 +44,3 @@
     var principal = document.getElementById('principal');
     console.log(principal);
 </script>
-</body>
-</html>
